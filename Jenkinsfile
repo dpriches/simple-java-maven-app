@@ -37,18 +37,18 @@ pipeline {
 // Build the app without running tests. Separates compilation errors from test errors		
 		stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package -f app/pom.xml'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 
 // Do some unit testing
         stage('Test') {
             steps {
-                sh 'mvn test -f app/pom.xml'
+                sh 'mvn test'
             }
             post {
                 always {
-                    junit 'app/app/target/surefire-reports/*.xml'
+                    junit 'app/target/surefire-reports/*.xml'
                 }
             }
         }
@@ -56,14 +56,14 @@ pipeline {
 // If pass, upload artifact to repo server
         stage('UploadArtifact') {
             steps {
-                sh 'mvn deploy -f app/pom.xml'
+                sh 'mvn deploy'
             }
         }
 
 // Create rpms
         stage('GenerateRpms') {
             steps {
-                sh 'mvn deploy -P create-rpms -f app/create-rpms/pom.xml'
+                sh 'mvn deploy -P create-rpms -f create-rpms/pom.xml'
             }
         }
 
