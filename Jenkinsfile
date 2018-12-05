@@ -34,10 +34,6 @@ pipeline {
 			}
 		}
 
-// Get the tools repo for the install script/config.xml
-		stage('GetTools') {
-		}
-
 // Build the app without running tests. Separates compilation errors from test errors		
 		stage('Build') {
             steps {
