@@ -48,7 +48,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'app/target/surefire-reports/*.xml'
+                    junit '**/target/surefire-reports/*.xml'
                 }
             }
         }
@@ -68,10 +68,10 @@ pipeline {
         }
 
 // Do cleanup
-/* 		stage('Cleanup') {
+ 		stage('Cleanup') {
 			steps {
 				step ([$class: 'WsCleanup'])
 			}
 		}
-*/	}
+	}
 }
