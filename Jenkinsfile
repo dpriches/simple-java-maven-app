@@ -21,35 +21,35 @@ pipeline {
 						echo "Parameter $s" 
 					}
 				}
+
+				// Get the tools directory for install scripts, etc
+                checkout([  
+					$class: 'GitSCM', 
+					branches: [[name: 'refs/heads/master']], 
+					doGenerateSubmoduleConfigurations: false, 
+					extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '../tools']], 
+					submoduleCfg: [], 
+					userRemoteConfigs: [[ credentialsId: '1a79b242-5a87-47d0-b801-768d5853b114', url: 'git@github.com:dpriches/build_tools.git' ]]
+				])
 			}
 		}
 
 // Get the tools repo for the install script/config.xml
-/*		stage('GetTools') {
-			steps {
-				checkout([  
-					$class: 'GitSCM', 
-					branches: [[name: 'refs/heads/master']], 
-					doGenerateSubmoduleConfigurations: false, 
-					extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'app']], 
-					submoduleCfg: [], 
-					userRemoteConfigs: [[ credentialsId: '1a79b242-5a87-47d0-b801-768d5853b114', url: ${REPO_URL} ]]
-				])
-			}
+		stage('GetTools') {
 		}
 		*/
 
 // Build the app without running tests. Separates compilation errors from test errors		
 		stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package -f app/pom.xml'
             }
         }
 
 // Do some unit testing
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn test -f app/pom.xml'
             }
             post {
                 always {
@@ -61,14 +61,14 @@ pipeline {
 // If pass, upload artifact to repo server
         stage('UploadArtifact') {
             steps {
-                sh 'mvn deploy'
+                sh 'mvn deploy -f app/pom.xml'
             }
         }
 
 // Create rpms
         stage('GenerateRpms') {
             steps {
-                sh 'mvn deploy -P create-rpms -f create-rpms/pom.xml'
+                sh 'mvn deploy -P create-rpms -f app/create-rpms/pom.xml'
             }
         }
 
