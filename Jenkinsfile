@@ -44,6 +44,7 @@ pipeline {
 			steps {
 				script {
 					sh 'chmod +x _scm-tools/tools/git-branch.sh;./_scm-tools/tools/git-branch.sh -d . -s master'
+                    sh 'cat create-rpms/pom.xml'
 				}
 				
 			}
