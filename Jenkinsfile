@@ -34,6 +34,21 @@ pipeline {
 			}
 		}
 
+// If this is the qa job that creates a release, run the commands to create a new branch
+        stage('qa-deploy') {
+			when {
+				expression { 
+					env.JOB_NAME.endsWith('qa')
+				}
+			}
+			steps {
+				script {
+					sh '_scm-tools/play.sh'
+				}
+				
+			}
+		}
+
 // Build the app without running tests. Separates compilation errors from test errors		
 		stage('Build') {
             steps {
