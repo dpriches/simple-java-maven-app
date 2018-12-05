@@ -43,7 +43,7 @@ pipeline {
 			}
 			steps {
 				script {
-					sh '_scm-tools/play.sh'
+					sh 'chmod +x _scm-tools/tools/git-branch.sh;./_scm-tools/tools/git-branch.sh -d . -s master'
 				}
 				
 			}
