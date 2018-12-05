@@ -82,7 +82,7 @@ if set true.
 For some reason both yum repos are only available when the id is nexus-yum...
 
 -->
-
+ 
   <distributionManagement>
     <repository>
       <id>nexus</id>
