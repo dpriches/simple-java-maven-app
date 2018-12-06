@@ -6,7 +6,6 @@ pipeline {
 		BUILD_TOOLS_CRED_ID  = 'f9db046c-3781-4562-874d-913f43d03e24'
 	}
 
-	
 	stages {	
 
 // Do some prep work for the build
