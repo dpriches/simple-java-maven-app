@@ -2,8 +2,8 @@ pipeline {
 	agent any
 	
  	environment {
-		REPO_URL   = 'git@github.com:dpriches/build_tools.git'
-		//REPO_CREDS = credentials ('jenkins-key')
+		BUILD_TOOLS_REPO_URL = 'git@github.com:dpriches/build_tools.git'
+		BUILD_TOOLS_CRED_ID  = 'f9db046c-3781-4562-874d-913f43d03e24'
 	}
 
 	
@@ -29,7 +29,7 @@ pipeline {
 					doGenerateSubmoduleConfigurations: false, 
 					extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '_scm-tools']], 
 					submoduleCfg: [], 
-					userRemoteConfigs: [[ credentialsId: 'f9db046c-3781-4562-874d-913f43d03e24', url: "${REPO_URL}" ]]
+					userRemoteConfigs: [[ credentialsId: "${BUILD_TOOLS_CRED_ID}", url: "${BUILD_TOOLS_REPO_URL}" ]]
 				])
 			}
 		}
