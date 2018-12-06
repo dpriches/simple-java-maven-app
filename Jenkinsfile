@@ -3,7 +3,7 @@ pipeline {
 	
  	environment {
 		REPO_URL   = 'git@github.com:dpriches/build_tools.git'
-		REPO_CREDS = credentials ('jenkins')
+		REPO_CREDS = credentials ('Jenkins')
 	}
 
 	
@@ -11,6 +11,7 @@ pipeline {
 
 // Do some prep work for the build
 		stage('Prep') {
+			
             steps {
 				// Get the list of target environments to deploy to.
                 script {
