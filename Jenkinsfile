@@ -58,6 +58,7 @@ pipeline {
         }
 
 // Do some unit testing
+/*
         stage('Test') {
             steps {
                 sh 'mvn test'
@@ -68,6 +69,7 @@ pipeline {
                 }
             }
         }
+*/
 
 // If pass, upload artifact to repo server
         stage('UploadArtifact') {
