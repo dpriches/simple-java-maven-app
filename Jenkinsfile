@@ -28,7 +28,7 @@ pipeline {
 					doGenerateSubmoduleConfigurations: false, 
 					extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '_scm-tools']], 
 					submoduleCfg: [], 
-					userRemoteConfigs: [[ credentialsId: "${REPO_CREDS", url: "${REPO_URL}" ]]
+					userRemoteConfigs: [[ credentialsId: "${REPO_CREDS}", url: "${REPO_URL}" ]]
 				])
 			}
 		}
