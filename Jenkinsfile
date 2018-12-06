@@ -58,18 +58,17 @@ pipeline {
         }
 
 // Do some unit testing
-/*
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    junit '**/target/surefire-reports/*.xml'
-                }
-            }
-        }
-*/
+//        stage('Test') {
+//            steps {
+//                sh 'mvn test'
+//            }
+//            post {
+//                always {
+//                    junit '**/target/surefire-reports/*.xml'
+//                }
+//            }
+//        }
+
 
 // If pass, upload artifact to repo server
         stage('UploadArtifact') {
