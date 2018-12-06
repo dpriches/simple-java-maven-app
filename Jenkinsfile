@@ -73,7 +73,7 @@ pipeline {
 // If pass, upload artifact to repo server
         stage('UploadArtifact') {
             steps {
-                sh 'mvn deploy'
+                sh 'mvn -DskipTests deploy'
             }
         }
 
