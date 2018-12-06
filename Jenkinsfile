@@ -3,7 +3,7 @@ pipeline {
 	
  	environment {
 		REPO_URL   = 'git@github.com:dpriches/build_tools.git'
-		REPO_CREDS = credentials ('jenkins-key')
+		//REPO_CREDS = credentials ('jenkins-key')
 	}
 
 	
