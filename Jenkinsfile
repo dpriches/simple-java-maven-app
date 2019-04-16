@@ -10,7 +10,7 @@ pipeline {
 // Do some prep work for the build - add branch publishing - feature/b2
 		stage('Prep') {
 			steps {
-				echo 'Branch is ' + env.BRANCH_NAME
+				echo 'Branch is ' + env.BRANCH_NAME // from f/b2
 			}
 		}
 
