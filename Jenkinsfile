@@ -1,3 +1,3 @@
-@Library('shared-library') _
+@Library('sharedLibrary') _
  
 mainEntryPoint ()
