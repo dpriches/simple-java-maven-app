@@ -1,3 +1,3 @@
 @Library('sharedLibrary') _
  
-mainEntryPoint ()
+mainEntryPoint (branch: 'master', url: 'https://github.com/dpriches/simple-java-maven-app')
