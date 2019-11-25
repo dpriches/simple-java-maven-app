@@ -1,1 +1,2 @@
 build_agent_label = master
+buildCmd = mvn package
