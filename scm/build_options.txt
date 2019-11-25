@@ -1,3 +1,4 @@
 build_agent_label = master
 buildCmd01 = mvn package
 buildCmd02 = mvn dependency:tree
+buildCmd03 = echo 'hello world'
