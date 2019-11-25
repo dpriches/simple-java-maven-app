@@ -1,2 +1,3 @@
 build_agent_label = master
-buildCmd = mvn package
+buildCmd01 = mvn package
+buildCmd02 = mvn dependency:tree
