@@ -1,7 +1,7 @@
 build_agent_label = master
-buildCmd01 = mvn compile -Dmaven.test.skip
+buildCmd08 = mvn compile -Dmaven.test.skip
 buildCmd03 = mvn compile -Dmaven.test.skip
 buildCmd02 = echo 'hello world'
-buildCmd08 = mvn compile -Dmaven.test.skip
+buildCmd01 = mvn compile -Dmaven.test.skip
 
-testCmd = mvn test
+#testCmd = mvn test
