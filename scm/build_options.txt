@@ -7,5 +7,5 @@ build_agent_label = master
 
 testCmd = mvn test
 
-enableJacoco = false
+enableJacoco = true
 enableJunit = true
