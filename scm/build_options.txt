@@ -2,7 +2,7 @@ build_agent_label = master
 buildCmd08 = mvn package
 buildCmd04 = mvn dependency:analyze
 buildCmd03 = mvn dependency:tree
-buildCmd02 = echo 'hello world' 
+buildCmd02 = echo build url is ${BUILD_URL}
 buildCmd01 = mvn compile -Dmaven.test.skip
 
 testCmd = mvn test
