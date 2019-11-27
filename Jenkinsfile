@@ -1,4 +1,2 @@
 @Library('sharedLibrary') _
-// test 
-//mainEntryPoint (branch: 'master', url: 'https://github.com/dpriches/simple-java-maven-app')
-mainEntryPoint (email: 'dpriches@gmail.com')
+mvnStandardPipeline (email: 'dpriches@gmail.com')
