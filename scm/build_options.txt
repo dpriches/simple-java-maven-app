@@ -1,11 +1,11 @@
 build_agent_label = master
-buildCmd08 = mvn compile -Dmaven.skip.tests
+#buildCmd08 = mvn compile -Dmaven.skip.tests
 #buildCmd04 = mvn dependency:analyze
 #buildCmd03 = mvn dependency:tree
-#buildCmd02 = echo build url is ${BUILD_URL}
-#buildCmd01 = echo git commit is ${GIT_COMMIT}
+buildCmd02 = echo build url is ${BUILD_URL}
+buildCmd01 = echo git commit is ${GIT_COMMIT}
 
-testCmd = mvn test
+#testCmd = mvn test
 
 enableJacoco = true
 enableJunit = true
