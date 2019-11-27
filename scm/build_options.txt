@@ -4,6 +4,7 @@ build_agent_label = master
 #buildCmd03 = mvn dependency:tree
 buildCmd02 = echo build url is ${BUILD_URL}
 buildCmd01 = echo git commit is ${GIT_COMMIT}
+buildCmd03 = echo pom artifact is ${pomFileArtifactId}
 
 #testCmd = mvn test
 
