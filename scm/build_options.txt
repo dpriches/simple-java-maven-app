@@ -10,5 +10,5 @@ buildCmd02 = echo build url is ${BUILD_URL}
 testCmd = echo 'test'
 uploadCmd = echo 'upload'
 
-#enableJacoco = false
-#enableJunit = false
+enableJacoco = false
+enableJunit = false
