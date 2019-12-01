@@ -1,4 +1,4 @@
-def defMethod () {
+def call () {
     echo "call from preBuild.groovy"
 }
 
