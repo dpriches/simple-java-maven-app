@@ -3,10 +3,10 @@ preBuildFile = scm/preBuild.groovy
 postBuildFile = scm/postBuild.groovy
 preUnitTestFile = scm/preBuild.groovy
 postUnitTestFile = scm/postBuild.groovy
-#buildCmd08 = mvn compile -Dmaven.skip.tests
+buildCmd08 = mvn compile -Dmaven.skip.tests
 #buildCmd04 = mvn dependency:analyze
 #buildCmd03 = mvn dependency:tree
-buildCmd02 = echo build url is ${BUILD_URL}
+#buildCmd02 = echo build url is ${BUILD_URL}
 #buildCmd01 = echo git commit is ${GIT_COMMIT}
 #buildCmd03 = echo pom artifact is ${pomFileArtifactId}
 
