@@ -1,6 +1,8 @@
 build_agent_label = master
-preBuildFile = scm/preBuildf.groovy
+preBuildFile = scm/preBuild.groovy
 postBuildFile = scm/postBuild.groovy
+preUnitTestFile = scm/preBuild.groovy
+postUnitTestFile = scm/postBuild.groovy
 #buildCmd08 = mvn compile -Dmaven.skip.tests
 #buildCmd04 = mvn dependency:analyze
 #buildCmd03 = mvn dependency:tree
